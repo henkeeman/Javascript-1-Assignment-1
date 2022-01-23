@@ -20,7 +20,7 @@ let userListElements = [];
 let editMode = false;
 // Variable som används för att specifisera vilken Userobject som ska editas
 let EditingUserId = 0;
-// Lägger in den redigerade mailen för att "godkänna" att den redigerande objektets email får collida
+// Lägger in den editmode mailen för att "godkänna" att den redigerande objektets email får collida
 let EditingUserEmail = "";
 
 form.addEventListener('submit',(e)=>{
