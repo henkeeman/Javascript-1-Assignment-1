@@ -39,6 +39,11 @@ function validateifLettersOrEmpty(input,message){
         input.classList.add("isInvalid")
         input.classList.remove("isValid")
     }
+    else if(input.value.length < 2){
+        message.push('Cant be less then 2 letters')
+        input.classList.add("isInvalid")
+        input.classList.remove("isValid")
+    }
     var letters = /^[A-Öa-ö]+$/;
     // let regEx = /\d/
 
@@ -125,11 +130,11 @@ function returnIfValid(input1,input2,input3,editmode = false){
     var letters = /^[A-Öa-ö]+$/;
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     // Kollar ifall förnamn är tomt/null eller ifall förnamnet innhåller några otillåtna tecken och inte är tomt. Returnerar att "valid" är false ifall något av det här stämde.
-    if((input1.value === '' || input1.value == null) || ((!input1.value.match(letters)) && input1.value !== '')){
+    if((input1.value === '' || input1.value == null) || ((!input1.value.match(letters)) && input1.value !== '') || input1.value.length < 2){
         return false;
     }
      // Kollar ifall efternamnetnamn är tomt/null eller ifall efternamnet innhåller några otillåtna tecken och inte är tomt. Returnerar att "valid" är false ifall något av det här stämde.
-    else if((input2.value === '' || input2.value == null) || ((!input2.value.match(letters)) && input2.value !== '')){
+    else if((input2.value === '' || input2.value == null) || ((!input2.value.match(letters)) && input2.value !== '')|| input2.value.length < 2){
         return false;
     }
      // Kollar ifall emailen är tomt/null eller ifall emailen ser ut som en email ska göra och inte är tomt. Returnerar att "valid" är false ifall något av det här stämde.
