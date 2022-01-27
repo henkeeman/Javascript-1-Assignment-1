@@ -166,7 +166,7 @@ function createUser(){
         email: email.value
         }
         userList.push(tempUser);
-        console.log(tempUser);
+  
 
         removeClasslist(fname);
         removeClasslist(lname);
